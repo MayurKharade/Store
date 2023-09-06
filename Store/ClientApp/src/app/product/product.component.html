@@ -1,0 +1,56 @@
+﻿<form [formGroup]="productForm" (ngSubmit)="onSubmit(productForm)">
+        <div class="row">
+            <div class="col-xs-1">
+                <label>Name</label>
+            </div>
+            <div class="col-xs-11">
+                <input formControlName="name" placeholder="product name" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-1">
+                <label>Price</label>
+            </div>
+            <div class="col-xs-11">
+                <input formControlName="price" placeholder="product price" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-1">
+                <label>Rating</label>
+            </div>
+            <div class="col-xs-11">
+                <input formControlName="rating" placeholder="product rating" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-1">
+
+            </div>
+            <div class="col-xs-11">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+</form>
+<br /><br />
+<div class="row">
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pd of products">
+                <td>{{pd.name}}</td>
+                <td>{{pd.price}}</td>
+                <td>{{pd.rating}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
